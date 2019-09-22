@@ -1,7 +1,6 @@
 body {
     background-color: black;
     font-family: futura-pt, sans-serif;
-    background: url(./images/background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -90,39 +89,54 @@ logo swap
 INDEX PAGE
 *********************/
 
-.carousel-caption, .comingSoon {
-    -webkit-text-stroke: -2px black;
-    color: #cdff44;
-    text-shadow: 2px 2px black;
-    font-family: Impact, Sans-serif;
-
+.carousel.img {
+    overflow: hidden;
+    height: 100%;
 }
 
-.comingSoon {
-    margin-top: 2em;
+.split {
+height: 100%;
+width: 50%;
+position: fixed;
+z-index: 1;
+top: 0;
+overflow-x: hidden;
+padding-top: 20px;
 }
 
-.carousel {
-    width:640px;
-    height:360px;
+.left {
+left: 0;
+background-color: #111;
+-ms-overflow-style: none;  
+overflow: -moz-scrollbars-none;  
 }
 
-.merchCard {
-    background-color: rgba(0, 0, 0, 0.75);
-    color: #ffffff;
-    font-family: 'Ubuntu', sans-serif;
-    margin: 1em;
+.left::-webkit-scrollbar {
+    display: none; 
+}
+  
+.right {
+right: 0;
+background-image: url(./images/gradient.jpg)
+}
+  
+/* If you want the content centered horizontally and vertically */
+.centered {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-60%, -50%);
+text-align: center;
 }
 
-.merchCard img {
-    width: 200px;
-    margin: 2em;
+.right-centered {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
 }
 
-.merchCard h4 {
-    color: #57c9c3;
-
-}
 
 /********************
 ABOUT PAGE CSS 
