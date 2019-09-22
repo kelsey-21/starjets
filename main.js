@@ -238,11 +238,13 @@ const albumBuilder = (albumArray) => {
         <div id="app">
             <div class="card-row">
                 <div class="card">
-                    <div class="card-front">
-                        <img class="card-img-top" src="${albums.albumArt}" alt="album image" />
+                    <div class="opacity">
+                        <div class="card-front">
+                            <img class="card-img-top" src="${albums.albumArt}" alt="album image" />
+                        </div>
                     </div>
                     <div class="card-back">
-                        <h4 id="albumTitle">${albums.albumTitle}</h4>
+                        <h4 class="albumTitle">${albums.albumTitle}</h4>
                         <h6 class="year-text">${albums.albumYear}</h6>
                     </div>
                 </div>
