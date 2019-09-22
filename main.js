@@ -375,8 +375,8 @@ const pageCheck = () => {
         cardPrinter(starjetsSingles);
     } else {
         logo.className - ' firstAnimation';
-        merchBuilder(merchPromo);
-
+        document.getElementById('enter').addEventListener('click', () => {
+            location.replace("/about.html")});
     }
 }
 
