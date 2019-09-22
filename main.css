@@ -205,20 +205,6 @@ ABOUT PAGE CSS
     font-style: italic;
 }
 
-.aboutVideosZone {
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.726); /* Black w/opacity/see-through */
-}
-.aboutVideoDiv {
-    margin: 50px 100px;
-    
-}
-.aboutVideosH3{
-    padding: 40px;
-    text-align: center;
-    color: white; 
-    font-size: 100px;
-}
 
 /****************** 
 TOUR  
@@ -340,94 +326,81 @@ TOUR
 Discography Styling 
 *********************/
 
-#songGrid {
-    background-color: rgba(0, 0, 0, 0.75);
-    color: #ffffff;
-    font-family: 'Ubuntu', sans-serif;
-    max-height: 100px;
-    margin: 1em;
-}
-
-.singles-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 2em;
-}
-
+/* entire container, keeps perspective */
 .album-container {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
+    margin: 0 auto 5em auto;
+    padding: 0;
     justify-content: center;
 }
 
-.album-card {
-    background-color: rgba(0, 0, 0, 0.75);
-    color: #ffffff;
-    font-family: 'Ubuntu', sans-serif;
-    margin: 1em;
-}
-
-#title1 {
-    text-shadow: 2px 2px black;
-    color: #cdff44;
-    font-family: 'Ubuntu', sans-serif;
+.card-row {
     display: flex;
-    margin-left: 8em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    padding-left: 8em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    /* min-width: 780px; */
+    width: 100%;
+    height: 500px;
+    padding: 0;
+    margin: 0;
+  }
+
+.card {
+    position: relative;
+    /* background-color: #FFFFFF; */
+    height: 350px;
+    width: 350px;
+    margin: 10px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.5);
+  }
+
+.card-front {
+    /* center horizontally overflown image */
+    position: absolute;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+    height: 350px;
+    min-width: 100%;
+    max-width: 450px;
 }
 
-#title2 {
-    text-shadow: 2px 2px black;
-    color: #57c9c3;
-    font-family: 'Ubuntu', sans-serif;
-    display: flex;
-    margin-left: 8em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-    padding-left: 8em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+.card-back {
+    position: absolute;
+    bottom: 0;
+    height: 130px;
+    padding: 10px;
 }
 
-#songTitle {
-    color: #57c9c3;
-    justify-content: center;
+.card-text {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
 }
 
-.disc-card-img {
-    max-height: 100px;
+.card-author {
+    font-size: 14px;
+    color: #BAB096;
 }
 
-#stats {
-    justify-content: flex-end;
+.card {
+    /* the other rules */
+    transition: height 0.3s, box-shadow 0.3s;
+  }
+
+.card:hover {
+    height: 410px;
+    box-shadow: 20px 20px 40px 0px rgba(0,0,0,0.5);
+ }
+ .card-img-top {
+    /* the other rules */
+    transition: height 0.3s, opacity 0.3s;
+ }
+.card-img-top.selected {
+    height: 410px;
+    opacity: 0.3;
 }
 
-#year {
-    color: #cdff44;
-}
 
-#starJetsAlbum {
-    display: flex;
-    flex-direction: row;
-}
-
-#albumTitle {
-    color: #cdff44;
-    font-family: 'Ubuntu', sans-serif;
-}
-
-.year-text {
-    color: #57c9c3;
-}
-
-.song-text {
-    font-size: 12px;
-}
 
 @media only screen and (max-width: 600px) {
     .logo img.image {
