@@ -427,6 +427,57 @@ Discography Styling
     margin: 20px;
 }
 
+#focus-album {
+    background-image: linear-gradient(to bottom right, #ff9934, #e768b5);
+    background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255, 0.8); 
+    color: white;
+    margin: auto;
+    padding: 100px 200px;
+    text-align: justify;
+    border: white solid 2px;
+    padding: -2px;
+}
+
+.album-card {
+    max-width: 100%;
+    height: auto;
+    margin-left: 75px;
+}
+
+.album-card img {
+    max-width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+
+.album-card-right {
+    padding-top: 30px;
+    text-transform: uppercase;
+}
+
+.album-card-title {
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.album-card-title, .album-card-text {
+    padding: 0;
+    color: white;
+}
+
+.socials {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: end;
+    color: white;
+    margin-top: 100px;
+}
+
+.socials a {
+    color: white;
+}
 
 
 @media only screen and (max-width: 600px) {
