@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: futura-pt, sans-serif;
     background: url(./images/background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -8,38 +8,49 @@ body {
     background-size: cover;
 }
 
-/* footer code */
+/*****************
+NAVBAR
+***************/
 html, body {
     height: 100%;
     margin: 0;
-  }
+}
 
 .navbar {
     position: fixed;
     bottom: 0;
     width: 100%;
+    text-transform: uppercase;
+    height: 4.2em;
+    font-size: 1.4em;
+    padding: .4em;
 }
 
-.footer {
-    height: 50px;
-  }
+.nav-item {
+    padding: 0 .6em;
+}
+
+.nav-item.socials {
+    list-style: none;
+    display: inline-block;
+}
 
 .navbar-nav .nav-link {
-    font-family: 'Ubuntu', sans-serif;
     color: #57c9c3;
 }
 
-.navbar a:active {
-    color: #cdff44 !important;
+
+.copyright {
+    color: #57c9c3;
+    margin: .5em;
 }
 
-.activePage {
-    color: #cdff44 !important;
-}
 
-/* STYLING FOR TOUR DATES */
 
-/* logo swap */
+/************** 
+logo swap
+*******************/
+
 .logo {
     display: flex;
     justify-content: center;
@@ -62,7 +73,6 @@ html, body {
     display: block;
 }
 
-/* logo animation */
 
 .firstAnimation {
     transition: 2s ease 1s;
@@ -76,9 +86,9 @@ html, body {
     animation-fill-mode: forwards;
 }
 
-
-
-/* Carousel caption */
+/**********************
+INDEX PAGE
+*********************/
 
 .carousel-caption, .comingSoon {
     -webkit-text-stroke: -2px black;
@@ -97,7 +107,27 @@ html, body {
     height:360px;
 }
 
-/* ABOUT PAGE CSS */
+.merchCard {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 1em;
+}
+
+.merchCard img {
+    width: 200px;
+    margin: 2em;
+}
+
+.merchCard h4 {
+    color: #57c9c3;
+
+}
+
+/********************
+ABOUT PAGE CSS 
+**********************/
+
 .bg-image {
     background-image: url("/images/starjetsAboutPageTitle2.jpg");
     background-position: 50% 210px;
@@ -216,9 +246,18 @@ html, body {
     font-size: 100px;
 }
 
+/****************** 
+TOUR  
+*********************/ 
+#show-more-message {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
-
-/* STYLING FOR TOUR PAGE */
 #tour-dates {
     margin: auto; 
     width: auto;
@@ -268,16 +307,6 @@ html, body {
     margin-bottom: 20px;
 }
 
-#show-more-message {
-    font-size: 2em;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-/* TOUR DATE BUTTON */ 
 .btn {
     padding: 14px 24px;
     border: 0 none;
@@ -333,7 +362,9 @@ html, body {
     padding: 10px 24px;
 }
 
-/* Discography Styling */
+/******************** 
+Discography Styling 
+*********************/
 
 #songGrid {
     background-color: rgba(0, 0, 0, 0.75);
@@ -422,31 +453,6 @@ html, body {
 
 .song-text {
     font-size: 12px;
-}
-/*copyright styling */
-
-.copyright {
-    color: #57c9c3;
-    margin: .5em;
-}
-
-/* merch styling */
-
-.merchCard {
-    background-color: rgba(0, 0, 0, 0.75);
-    color: #ffffff;
-    font-family: 'Ubuntu', sans-serif;
-    margin: 1em;
-}
-
-.merchCard img {
-    width: 200px;
-    margin: 2em;
-}
-
-.merchCard h4 {
-    color: #57c9c3;
-
 }
 
 @media only screen and (max-width: 600px) {
