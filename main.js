@@ -2,7 +2,8 @@
 const logo = document.getElementsByClassName('logo')[0];
 let currentPage = document.URL;
 
-//PROMO ARRAY
+// INDEX PAGE ARRAYS
+//////////////////////
 
 const merchPromo = [
     {
@@ -39,7 +40,32 @@ const merchPromo = [
     }
 ]
 
-// TOUR DATES ARRAYS
+// ABOUT PAGE ARRAYS
+const bandMembers = [
+    {
+    image: '/images/terrysharpe.jpg',
+    name: 'Terry Sharpe',
+    instrument: 'Vocals & Guitar'
+  },
+  {
+    image: '/images/paulbowen.jpg',
+    name: 'Paul Bowen',
+    instrument: 'Guitar & Vocals'
+},
+{
+    image: '/images/seanmartin.jpg',
+    name: 'Sean Martin',
+    instrument: 'Bass Guitar'
+},
+{
+    image: '/images/LiamLEstrange.jpg',
+    name: "Liam L'Estrange",
+    instrument: 'Drums'
+},  
+]
+
+// TOUR PAGE ARRAYS
+//////////////////////
 tourDates = [
     {
         month: 'SEP',
@@ -94,159 +120,8 @@ moreTourDates = [
     },
 ];
 
-// PRINT TO DOM FUNCTION
-const printToDom = (divId, stringToPrint) => {
-    document.getElementById(divId).innerHTML = stringToPrint;
-};
-
-// PRINTS TOUR DATES BANNERS TO PAGE
-const tourDatePrinter = (tourArr) => {
-    let tourCard = '';
-    for (let i = 0; i < tourArr.length; i++) {
-        tourCard += `
-        <div class="tour row d-flex align-items-center">
-            <div class="date-zone col-1">
-                <div class="row date-zone-row month">${tourArr[i].month}</div>
-                <div class="row date-zone-row day">${tourArr[i].day}</div>
-                <div class="row date-zone-row time">${tourArr[i].time}</div>
-            </div>
-            <div class="col-4 venue">${tourArr[i].venue}</div>
-            <div class="col-4 location">${tourArr[i].location}</div>
-            <div class="col-2 button"><a href="${tourArr[i].linkToTickets}" target="_blank" class="btn btn-primary">BUY TICKETS</a></div>
-        </div>
-        `
-    }
-    if (tourArr === tourDates) {
-        printToDom('tour-dates', tourCard)
-    } else if (tourArr === moreTourDates) {
-        printToDom('show-me-more', tourCard)
-    }
-};
-
-// MESSAGE TO SHOW WHEN BUTTON IS CLICKED
-const printNewMessage = () => {
-    let removeEmailForm = document.getElementById('email-zone');
-    let newString = `
-    <div id="email-message">
-    <h2>THANK YOU FOR SUBSCRIBING!</h2>
-    <button type="button" id="read-more" class="col-3 btn btn-primary">READ MORE</button>
-    </div>
-    `
-    if (document.getElementById('exampleInputEmail1').value === '') {
-            alert('Please enter an email!');
-        } else {
-            while (removeEmailForm.hasChildNodes()) {
-                removeEmailForm.removeChild(removeEmailForm.firstChild);
-            }
-            printToDom('email-message', newString);
-            document.getElementById('read-more').addEventListener('click', () => {
-                location.replace("/about.html");});
-        }
-    }
-
-const printMessage = () => {
-    let removeSMButton = document.getElementById('SMButton');
-        tourDatePrinter(moreTourDates);
-        while (removeSMButton.hasChildNodes()) {
-            removeSMButton.removeChild(removeSMButton.firstChild);
-        }
-}
-
-// EMAIL FORM
-const printEmailForm = () => {
-    let emailString = `
-    <div>
-    <h2>STAY IN TOUCH</h2>
-    <P>Subscribe to email updates to stay up to date with news from the Tango Brigade.</P>
-    <form class="row">
-        <div class="form-group col-9">
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@email.com">
-        </div>
-        <button type="button" id="subscribe" class="col-3 btn btn-primary">SUBSCRIBE</button>
-    </form>
-    </div>
-    `
-    printToDom('email-zone', emailString);
-}
-
-//MERCH LOOP
-
-const merchBuilder = (merchArray) => {
-    let merchString = `
-    <div class="row justify-content-center">
-    `
-    for (let i =0; i < merchArray.length; i++) {
-        const merchCard = merchArray[i];
-        merchString += `
-            <div class="card merchCard col-sm-4 d-flex justify-text-center">
-                <div class="text-center">
-                <img src="${merchCard.img}" class="card-img-top" alt="${merchCard.name}"></div>
-                <div class="card-body">
-                    <h4>${merchCard.name}</h4>
-                    <p><strong>Type:</strong> ${merchCard.type}</p>
-                    <p><strong>Sizes:</strong> ${merchCard.sizes}</p>
-                    <p><strong>Color:</strong> ${merchCard.color}</p>
-                    <p><strong>Availability:</strong> ${merchCard.available}</p>
-                </div>
-            </div>
-        `;
-    }
-    merchString += '</div>';
-    printToDom('merchZone', merchString);
-};
-
-// CHECK PREVIOUS PAGE LOCATION AND ANIMATE
-
-const checkPrev = () => {
-    if (document.referrer.includes('index.html')) {
-        logo.className += ' firstAnimation';
-    } else {
-        logo.className += ' leftToRight';
-    }
-}
-
-// ABOUT PAGE MEMBER PROFILE CARDS
-const bandMembers = [
-    {
-    image: '/images/terrysharpe.jpg',
-    name: 'Terry Sharpe',
-    instrument: 'Vocals & Guitar'
-  },
-  {
-    image: '/images/paulbowen.jpg',
-    name: 'Paul Bowen',
-    instrument: 'Guitar & Vocals'
-},
-{
-    image: '/images/seanmartin.jpg',
-    name: 'Sean Martin',
-    instrument: 'Bass Guitar'
-},
-{
-    image: '/images/LiamLEstrange.jpg',
-    name: "Liam L'Estrange",
-    instrument: 'Drums'
-},  
-]
-
-const bandBuilder = (bandArray) =>{
-    let aboutBandCard='';
-    for (let i=0; i < bandArray.length; i++){
-        const bandCard= bandArray[i];
-        aboutBandCard +=`
-        <div class="bandCard">
-            <h2>${bandCard.name}</h2>
-            <img src="${bandCard.image}" alt="Image of ${bandCard.name}"/>
-            <p>${bandCard.instrument}</p>
-        </div>
-        `
-    }
-    printToDom('aboutMembersZone', aboutBandCard);
-}
-
-// DISCOGRAPHY //
-
 // DISC PAGE ARRAYS
+///////////////////////////
 const tangoSingles = [
     {
         albumArt: 'https://img.discogs.com/K1D4-fJyXC7caO6HIUvBcLwmjNo=/fit-in/490x495/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3173532-1319058781.jpeg.jpg',
@@ -356,6 +231,139 @@ const starjetsAlbums = [
     },
 ];
 
+// PRINT TO DOM 
+///////////////////
+const printToDom = (divId, stringToPrint) => {
+    document.getElementById(divId).innerHTML = stringToPrint;
+};
+
+// TOUR PAGE FUNCTIONS
+/////////////////////////
+const tourDatePrinter = (tourArr) => {
+    let tourCard = '';
+    for (let i = 0; i < tourArr.length; i++) {
+        tourCard += `
+        <div class="tour row d-flex align-items-center">
+            <div class="date-zone col-1">
+                <div class="row date-zone-row month">${tourArr[i].month}</div>
+                <div class="row date-zone-row day">${tourArr[i].day}</div>
+                <div class="row date-zone-row time">${tourArr[i].time}</div>
+            </div>
+            <div class="col-4 venue">${tourArr[i].venue}</div>
+            <div class="col-4 location">${tourArr[i].location}</div>
+            <div class="col-2 button"><a href="${tourArr[i].linkToTickets}" target="_blank" class="btn btn-primary">BUY TICKETS</a></div>
+        </div>
+        `
+    }
+    if (tourArr === tourDates) {
+        printToDom('tour-dates', tourCard)
+    } else if (tourArr === moreTourDates) {
+        printToDom('show-me-more', tourCard)
+    }
+};
+
+const printNewMessage = () => {
+    let removeEmailForm = document.getElementById('email-zone');
+    let newString = `
+    <div id="email-message">
+    <h2>THANK YOU FOR SUBSCRIBING!</h2>
+    <button type="button" id="read-more" class="col-3 btn btn-primary">READ MORE</button>
+    </div>
+    `
+    if (document.getElementById('exampleInputEmail1').value === '') {
+            alert('Please enter an email!');
+        } else {
+            while (removeEmailForm.hasChildNodes()) {
+                removeEmailForm.removeChild(removeEmailForm.firstChild);
+            }
+            printToDom('email-message', newString);
+            document.getElementById('read-more').addEventListener('click', () => {
+                location.replace("/about.html");});
+        }
+    }
+
+const printMessage = () => {
+    let removeSMButton = document.getElementById('SMButton');
+        tourDatePrinter(moreTourDates);
+        while (removeSMButton.hasChildNodes()) {
+            removeSMButton.removeChild(removeSMButton.firstChild);
+        }
+}
+
+
+const printEmailForm = () => {
+    let emailString = `
+    <div>
+    <h2>STAY IN TOUCH</h2>
+    <P>Subscribe to email updates to stay up to date with news from the Tango Brigade.</P>
+    <form class="row">
+        <div class="form-group col-9">
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@email.com">
+        </div>
+        <button type="button" id="subscribe" class="col-3 btn btn-primary">SUBSCRIBE</button>
+    </form>
+    </div>
+    `
+    printToDom('email-zone', emailString);
+}
+
+// INDEX PAGE FUNCTIONS
+////////////////////////////
+const merchBuilder = (merchArray) => {
+    let merchString = `
+    <div class="row justify-content-center">
+    `
+    for (let i =0; i < merchArray.length; i++) {
+        const merchCard = merchArray[i];
+        merchString += `
+            <div class="card merchCard col-sm-4 d-flex justify-text-center">
+                <div class="text-center">
+                <img src="${merchCard.img}" class="card-img-top" alt="${merchCard.name}"></div>
+                <div class="card-body">
+                    <h4>${merchCard.name}</h4>
+                    <p><strong>Type:</strong> ${merchCard.type}</p>
+                    <p><strong>Sizes:</strong> ${merchCard.sizes}</p>
+                    <p><strong>Color:</strong> ${merchCard.color}</p>
+                    <p><strong>Availability:</strong> ${merchCard.available}</p>
+                </div>
+            </div>
+        `;
+    }
+    merchString += '</div>';
+    printToDom('merchZone', merchString);
+};
+
+// LOGO ANIMATION FUNCTION
+///////////////////////////////////
+const checkPrev = () => {
+    if (document.referrer.includes('index.html')) {
+        logo.className += ' firstAnimation';
+    } else {
+        logo.className += ' leftToRight';
+    }
+}
+
+
+// ABOUT PAGE FUNCTIONS
+/////////////////////////////
+const bandBuilder = (bandArray) =>{
+    let aboutBandCard='';
+    for (let i=0; i < bandArray.length; i++){
+        const bandCard= bandArray[i];
+        aboutBandCard +=`
+        <div class="bandCard">
+            <h2>${bandCard.name}</h2>
+            <img src="${bandCard.image}" alt="Image of ${bandCard.name}"/>
+            <p>${bandCard.instrument}</p>
+        </div>
+        `
+    }
+    printToDom('aboutMembersZone', aboutBandCard);
+}
+
+
+// DISC PAGE FUNCTIONS
+////////////////////////////////////
 const cardPrinter = (songArray) => {
     let stringToPrint = ''
     for (let i = 0; i < songArray.length; i++) {
@@ -407,7 +415,8 @@ const albumBuilder = (albumArray) => {
     printToDom('starJetsAlbum', domString);
 }
 
-// PAGE LOAD CHECK DO NOT PUT ANYTHING BELOW THIS
+// PAGE LOAD FUNCTION
+/////////////////////////////
 const pageCheck = () => {
     if (currentPage.includes('tour.html')) {
         tourDatePrinter(tourDates);
