@@ -6,24 +6,24 @@ let currentPage = document.URL;
 // ABOUT PAGE ARRAYS
 const bandMembers = [
     {
-    image: '/images/terrysharpe.jpg',
+    image: '/images/band-member1.jpg',
     name: 'Terry Sharpe',
     instrument: 'Vocals & Guitar'
   },
   {
-    image: '/images/paulbowen.jpg',
+    image: '/images/band-member2.jpg',
     name: 'Paul Bowen',
-    instrument: 'Guitar & Vocals'
+    instrument: 'Guitar'
 },
 {
-    image: '/images/seanmartin.jpg',
+    image: '/images/band-member3.jpg',
     name: 'Sean Martin',
-    instrument: 'Bass Guitar'
+    instrument: 'Drums'
 },
 {
-    image: '/images/LiamLEstrange.jpg',
+    image: '/images/band-member4.jpg',
     name: "Liam L'Estrange",
-    instrument: 'Drums'
+    instrument: 'Bass Guitar'
 },  
 ]
 
@@ -287,13 +287,13 @@ const checkPrev = () => {
 /////////////////////////////
 const bandBuilder = (bandArray) =>{
     let aboutBandCard='';
-    for (let i=0; i < bandArray.length; i++){
+    for (let i = 0; i < bandArray.length; i++){
         const bandCard= bandArray[i];
         aboutBandCard +=`
         <div class="bandCard">
-            <h2>${bandCard.name}</h2>
             <img src="${bandCard.image}" alt="Image of ${bandCard.name}"/>
-            <p>${bandCard.instrument}</p>
+            <h2 class="band-member-name">${bandCard.name}</h2>
+            <p class="band-member-instrument">${bandCard.instrument}</p>
         </div>
         `
     }
@@ -365,7 +365,6 @@ const pageCheck = () => {
         document.getElementById('subscribe').addEventListener('click', printNewMessage);
 
     } else if (currentPage.includes('about.html')) {
-        checkPrev();
         bandBuilder(bandMembers);
         
     } else if (currentPage.includes('disc.html')) {

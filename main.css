@@ -1,5 +1,5 @@
 body {
-    background-color: black;
+    background-color: white;
     font-family: futura-pt, sans-serif;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -20,11 +20,10 @@ html, body {
     bottom: 0;
     width: 100%;
     text-transform: uppercase;
-    height: 4.2em;
+    height: 3.5em;
     font-size: 1.4em;
     padding: .4em;
-    background-color: white; /* Fallback color */
-    background-color: rgba(253, 253, 253, 0.712); /* Black w/opacity/see-through */
+    background-color: white;
 }
 
 .nav-item {
@@ -36,17 +35,10 @@ html, body {
     display: inline-block;
 }
 
-.navbar-nav .nav-link {
-    color: #57c9c3;
-}
-
-
 .copyright {
     color: #57c9c3;
     margin: .5em;
 }
-
-
 
 /************** 
 logo swap
@@ -97,20 +89,20 @@ INDEX PAGE
 }
 
 .split {
-height: 100%;
-width: 50%;
-position: fixed;
-z-index: 1;
-top: 0;
-overflow-x: hidden;
-padding-top: 20px;
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
 }
 
 .left {
-left: 0;
-background-color: #111;
--ms-overflow-style: none;  
-overflow: -moz-scrollbars-none;  
+    left: 0;
+    background-color: #111;
+    -ms-overflow-style: none;  
+    overflow: -moz-scrollbars-none;  
 }
 
 .left::-webkit-scrollbar {
@@ -118,16 +110,17 @@ overflow: -moz-scrollbars-none;
 }
   
 .right {
-right: 0;
-background-image: url(./images/gradient.jpg)
+    right: 0;
+    background-image: linear-gradient(to bottom right, #ff9934, #e768b5);
+    background-repeat: no-repeat;
 }
 
 .centered {
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-60%, -50%);
-text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    text-align: center;
 }
 
 .right-centered {
@@ -163,58 +156,53 @@ ABOUT PAGE CSS
     transform: translate(50%, -400px);
 }
 .aboutBio{
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.712); /* Black w/opacity/see-through */
+    background-image: linear-gradient(to bottom right, #ff9934, #e768b5);
+    background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255, 0.8); 
     color: white;
     margin: auto;
-    padding: 50px 200px;
+    padding: 100px 200px;
     text-align: justify;
+    border: white solid 2px;
+    padding: -2px;
+}
 
-}
-.aboutH3{
-    text-align: center;
-    color: rgba(70, 195, 199);
-}
-.bg-image2{
-    background-image: url("/images/starjetsAboutPageTitle2.jpg");
-    background-position: 50% 210px;
-    max-width: 100%;
-    padding: 50px 50px;
-    height: 200px; 
-    filter: blur(3px);
-    -webkit-filter: blur(3px);
-   
-}
 #aboutMembersZone{
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(70, 195, 199, 0.712); /* Black w/opacity/see-through */
-    color: white;
     text-align: center;
     display: flex;
-
- 
-
-
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
-.bandCard{
-    margin: 20px 20px 10px 20px;
+
+.bandCard {
     width: 100%;
-    margin-top: 90px;
-    margin-bottom: 90px;
-    padding: 40px;
-    color: white;
     text-align: center;
-    border-radius: 10px;
-    background-color: black;
+    background-color: #ff9934; /*** orange **/
+    opacity: 0.5;
     border: 3px white;
     flex: 0 50%;
-    box-sizing:border-box;
+    box-sizing: border-box;
     flex-wrap: wrap;
 }
 .bandCard img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+    width: 100%;
+    height: auto;
+}
+
+.bandCard:hover {
+    opacity: 1.0;
+}
+
+.band-member-name {
+    padding: 15px;
+    text-transform: uppercase;
+}
+
+.band-member-instrument {
+    padding-bottom: 15px;
+    font-style: italic;
 }
 
 .aboutVideosZone {
