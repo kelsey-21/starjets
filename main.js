@@ -31,25 +31,19 @@ const bandMembers = [
 //////////////////////
 tourDates = [
     {
-        month: 'SEP',
-        day: '24',
-        time: '6:00pm',
+        date: '9/24/2019',
         venue: 'The Station Inn',
         location: 'Nashville, TN, USA',
         linkToTickets: 'https://www.ticketmaster.com/',
     },
     {
-        month: 'OCT',
-        day: '1',
-        time: '6:00pm',
+        date: '10/12/2019',
         venue: 'The Station Inn',
         location: 'Nashville, TN, USA',
         linkToTickets: 'https://www.ticketmaster.com/',
     },
     {
-        month: 'OCT',
-        day: '8',
-        time: '6:00pm',
+        date: '10/24/2019',
         venue: 'The Station Inn',
         location: 'Nashville, TN, USA',
         linkToTickets: 'https://www.ticketmaster.com/',
@@ -58,25 +52,19 @@ tourDates = [
 
 moreTourDates = [
     {
-        month: 'OCT',
-        day: '15',
-        time: '6:00pm',
+        date: '10/31/2019',
         venue: 'The Station Inn',
         location: 'Nashville, TN, USA',
         linkToTickets: 'https://www.ticketmaster.com/',
     },
     {
-        month: 'OCT',
-        day: '22',
-        time: '6:00pm',
+        date: '11/14/2019',
         venue: 'The Station Inn',
         location: 'Nashville, TN, USA',
         linkToTickets: 'https://www.ticketmaster.com/',
     },
     {
-        month: 'OCT',
-        day: '29',
-        time: '6:00pm',
+        date: '12/21/2019',
         venue: 'The Station Inn',
         location: 'Nashville, TN, USA',
         linkToTickets: 'https://www.ticketmaster.com/',
@@ -119,6 +107,12 @@ const starjetsAlbums = [
         albumYear: 'Jan 21 2016',
         songs: [],
     },
+    {
+        albumArt: './images/album-art6.jpg',
+        albumTitle: 'Starjets',
+        albumYear: 'Feb 21 2012',
+        songs: [],
+    },
 ];
 
 // PRINT TO DOM 
@@ -135,13 +129,11 @@ const tourDatePrinter = (tourArr) => {
         tourCard += `
         <div class="tour row d-flex align-items-center">
             <div class="date-zone col-1">
-                <div class="row date-zone-row month">${tourArr[i].month}</div>
-                <div class="row date-zone-row day">${tourArr[i].day}</div>
-                <div class="row date-zone-row time">${tourArr[i].time}</div>
+                <div class="row date-zone-row month">${tourArr[i].date}</div>
             </div>
             <div class="col-4 venue">${tourArr[i].venue}</div>
             <div class="col-4 location">${tourArr[i].location}</div>
-            <div class="col-2 button"><a href="${tourArr[i].linkToTickets}" target="_blank" class="btn btn-primary">BUY TICKETS</a></div>
+            <div class="col-2 button"><a href="${tourArr[i].linkToTickets}" target="_blank" class="btn btn-primary">TICKETS</a></div>
         </div>
         `
     }
@@ -183,15 +175,17 @@ const printMessage = () => {
 
 const printEmailForm = () => {
     let emailString = `
-    <div>
-    <h2>STAY IN TOUCH</h2>
-    <P>Subscribe to email updates to stay up to date with news from the Tango Brigade.</P>
-    <form class="row">
-        <div class="form-group col-9">
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@email.com">
+    <div class="row">
+        <div class="col">
+            <h2>STAY IN TOUCH</h2>
         </div>
-        <button type="button" id="subscribe" class="col-3 btn btn-primary">SUBSCRIBE</button>
-    </form>
+        <div class="form-group col">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@email.com">
+        </div>
+        <div class="col">
+            <button type="button" id="subscribe" class="btn btn-primary">SUBSCRIBE</button>
+        </div>
+        </form>
     </div>
     `
     printToDom('email-zone', emailString);
