@@ -222,20 +222,13 @@ TOUR
 #tour-dates {
     margin: auto; 
     width: auto;
-
 }
 
 .tour {
-    margin-top: 25px;
-    margin-bottom: 25px;
     background-color: white;
-    border-radius: 4px 4px 4px 4px;
-    box-shadow: 2px 2px black;
-}
-
-.date-zone {
-    color: white;
-    background-color: #505050;
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+    padding: 15px;
 }
 
 .date-zone-row {
@@ -245,14 +238,8 @@ TOUR
 }
 
 .month, .time {
-    font-size: 0.8em;
     margin-top: 2px;
     margin-bottom: 2px;
-}
-
-.day {
-    font-size: 3em;
-    font-weight: bold;
 }
 
 .center {
@@ -262,10 +249,7 @@ TOUR
 #upcoming {
     font-size: 3em;
     font-weight: bold;
-    color: white;
-    margin-left: 3em;
-    margin-top: -50px;
-    margin-bottom: 20px;
+    margin: 50px;
 }
 
 .btn {
@@ -282,16 +266,16 @@ TOUR
 }
  
 .btn-primary {
-    background: #80d6d1;
+    background: #ff9934;
     color: #ffffff;
 }
  
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: #57c9c3;
+    background: #ff9934;
 }
  
 .btn-primary:active, .btn-primary.active {
-    background: #007299;
+    background: #ff9934;
     box-shadow: none;
 }
 
@@ -305,11 +289,11 @@ TOUR
     background-color: rgba(0, 0, 0, 0.712); /* Black w/opacity/see-through */
     color: white;
     margin: auto;
-    padding: 40px 200px;
+    padding: 20px 200px;
 }
 
 #border-nav {
-    padding: 80px 160px;
+    padding: 50px 160px;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0, 0, 0, 0.712); /* Black w/opacity/see-through */
 }
