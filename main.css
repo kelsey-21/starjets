@@ -44,6 +44,9 @@ html, body {
 /************** 
 logo swap
 *******************/
+.home-logo {
+    z-index: 2;
+}
 
 .logo {
     display: flex;
@@ -53,31 +56,6 @@ logo swap
 
 .logo img.image {
     height: 100px;
-}
-
-.logo:hover img.image {
-    display: none;
-}
-
-.logo img.hover {
-    display: none;
-}
-
-.logo:hover img.hover {
-    display: block;
-}
-
-
-.firstAnimation {
-    transition: 2s ease 1s;
-    transform: translate(-30%, -30%) scale(.40, .40);
-    animation-fill-mode: forwards;
-}
-
-.leftToRight {
-    transition: 2s ease 1s;
-    transform: translate(30%, -30%) scale(.40, .40);
-    animation-fill-mode: forwards;
 }
 
 /**********************
