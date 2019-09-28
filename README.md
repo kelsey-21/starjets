@@ -5,10 +5,10 @@ This web page is shows a functional band's website. Once a user enter the websit
 
 
 # Screenshots
-![]()
-![]()
-![]()
-![]()
+![home page](https://raw.githubusercontent.com/kelseycreel/starjets/master/screenshots/starjets1.PNG?token=AM45ZLST63RLBOXCJNE6P4K5R7IUU)
+![about us page](https://raw.githubusercontent.com/kelseycreel/starjets/master/screenshots/starjets2.PNG?token=AM45ZLST63RLBOXCJNE6P4K5R7IUU)
+![tour page](https://raw.githubusercontent.com/kelseycreel/starjets/master/screenshots/starjets3.PNG?token=AM45ZLST63RLBOXCJNE6P4K5R7IUU)
+![music page](https://raw.githubusercontent.com/kelseycreel/starjets/master/screenshots/starjets4.PNG?token=AM45ZLST63RLBOXCJNE6P4K5R7IUU)
 
 # How to run
 * Clone down this project
