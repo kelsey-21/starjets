@@ -10,6 +10,12 @@ This web page is shows a functional band's website. Once a user enter the websit
 ![tour page](https://raw.githubusercontent.com/kelseycreel/starjets/master/screenshots/starjets3.PNG)
 ![music page](https://raw.githubusercontent.com/kelseycreel/starjets/master/screenshots/starjets4.PNG)
 
+# Contributors
+* [Kelsey Creel](https://github.com/kelseycreel)
+* [Laura Collins](https://github.com/LaCollins)
+* [Isis Christopher](https://github.com/isischristopher)
+* [Maria Brock](https://github.com/mariabrock)
+
 # How to run
 * Clone down this project
 * Install [http-server](https://www.npmjs.com/package/http-server) from npm
