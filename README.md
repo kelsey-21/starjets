@@ -5,10 +5,10 @@ This web page is shows a functional band's website. Once a user enter the websit
 
 
 # Screenshots
-![home page](https://raw.githubusercontent.com/kelseycreel/starjets/master/screenshots/starjets1.PNG?token=AM45ZLST63RLBOXCJNE6P4K5R7IUU)
-![about us page](https://raw.githubusercontent.com/kelseycreel/starjets/master/screenshots/starjets2.PNG?token=AM45ZLTN3X376GQ3JEJ3TWK5R7I4I)
-![tour page](https://raw.githubusercontent.com/kelseycreel/starjets/master/screenshots/starjets3.PNG?token=AM45ZLTLRHHNNW6BYRG5WQC5R7I6M)
-![music page](https://raw.githubusercontent.com/kelseycreel/starjets/master/screenshots/starjets4.PNG?token=AM45ZLXTRFUINJXWP27AEFC5R7I7G)
+![home page](https://raw.githubusercontent.com/kelseycreel/starjets/master/screenshots/starjets1.PNG)
+![about us page](https://raw.githubusercontent.com/kelseycreel/starjets/master/screenshots/starjets2.PNG)
+![tour page](https://raw.githubusercontent.com/kelseycreel/starjets/master/screenshots/starjets3.PNG)
+![music page](https://raw.githubusercontent.com/kelseycreel/starjets/master/screenshots/starjets4.PNG)
 
 # How to run
 * Clone down this project
